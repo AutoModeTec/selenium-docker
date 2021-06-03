@@ -1,0 +1,3 @@
+1620491376476	geckodriver	INFO	Listening on 127.0.0.1:34191
+1620491378172	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4JvS5E"
+Error: no DISPLAY environment variable specified
