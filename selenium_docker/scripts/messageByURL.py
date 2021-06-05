@@ -40,11 +40,12 @@ class NewContact:
             return
         except:
             # send message
+            time.sleep(2)
             message_field = driver.find_elements_by_xpath(
                 '//div[contains(@class,"copyable-text selectable-text")]')[-1]
             message_field.send_keys(Keys.ENTER)
-            # message_field.click()
-            # message_field.click()
+            message_field.click()
+            message_field.click()
             # I sent a message
 
             # verificate if message wasn't sent

@@ -137,19 +137,24 @@ def qrcode_step(driver, aux=0):
 
 
 def main(message, driver):
-
+    print('main')
     driver.get('https://web.whatsapp.com/')
     time.sleep(10)
 
     driver.save_screenshot('whatsappWeb.png')
+    print("screenshot")
     send_image_to_db()
+    print("send_to_db")
     time.sleep(30)
     # qrcode verification step
-    #qrcode_step(driver)
+    print("qrcode_step")
+    qrcode_step(driver)
+    print("New contact")
     nc = NewContact(driver)
 
     time.sleep(3)
     # cycle in which the program reads and writes to the database
+    print("while true")
     while True:
         breaker = WriteToDBForSend(nc, message, driver)
         if not breaker:
